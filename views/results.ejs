@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search Results</title>
+</head>
+<body>
+    <h1>Recipe Search Results</h1>
+    
+    <% if (recipes.length === 0) { %>
+        <p>No recipes found.</p>
+    <% } else { %>
+        <ul>
+            <% recipes.forEach(recipe => { %>
+                <li>
+                    <h2><%= recipe.title %></h2>
+                    <p>Missing Ingredients: <%= recipe.missedIngredients.length %></p>
+                    <p>Used Ingredients: <%= recipe.usedIngredients.length %></p>
+                    <p>Unused Ingredients: <%= recipe.unusedIngredients.length %></p>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+</body>
+</html>
