@@ -1,4 +1,4 @@
-import SPOONACULAR_API_KEY from  "./keyapi.js";
+//import SPOONACULAR_API_KEY from  "./keyapi.js";
 require('dotenv').config();
 
 

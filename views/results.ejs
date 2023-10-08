@@ -3,24 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Search Results</title>
+    <title>Recipe Search Results:</title>
+   <style>
+        body {
+            font-family: "Century Gothic", serif;
+            background-color: #decdcb;           
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+            text-align: center;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #f7f7f7a7;
+            color: #5d7536;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 50px; /* Adjust the logo size as needed */
+            max-height: 50px;
+            margin-left: 40px; /* Add margin to center the logo vertically */
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background to the form */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        } 
+
+        label {
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1>Recipe Search Results</h1>
-    
-    <% if (recipes.length === 0) { %>
-        <p>No recipes found.</p>
-    <% } else { %>
-        <ul>
-            <% recipes.forEach(recipe => { %>
-                <li>
-                    <h2><%= recipe.title %></h2>
-                    <p>Missing Ingredients: <%= recipe.missedIngredients.length %></p>
-                    <p>Used Ingredients: <%= recipe.usedIngredients.length %></p>
-                    <p>Unused Ingredients: <%= recipe.unusedIngredients.length %></p>
-                </li>
-            <% }); %>
-        </ul>
-    <% } %>
+    <!-- Container for background image -->
+    <div id="background-container">
+        <!-- Your existing content goes here -->
+        
+        <% if (recipes.length === 0) { %>
+            <p>No recipes found.</p>
+        <% } else { %>
+            <ul>
+                <% recipes.forEach(recipe => { %>
+                    <ul>
+                        <h2><%= recipe.title %></h2>
+                        <p>Missing Ingredients: <%= recipe.missedIngredients.length %></p>
+                        <p>Used Ingredients: <%= recipe.usedIngredients.length %></p>
+                        <p>Unused Ingredients: <%= recipe.unusedIngredients.length %></p>
+                    </ul>
+                <% }); %>
+            </ul>
+        <% } %>
+    </div>
 </body>
 </html>
