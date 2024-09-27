@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <style>
+        body {
+            font-family: "Century Gothic", serif;
+            background-image: url('https://images7.alphacoders.com/912/912808.jpg');
+            background-size: 100% 115%; 
+            background-repeat: no-repeat; 
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #f7f7f7a7;
+            color: #5d7536;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 300px; /* Adjust the logo size as needed */
+            margin: 20px 0; /* Add margin to center the logo vertically */
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"] {
+            background-color: #9f4417;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Recipe Search</h1>
+
+
+    <img src="https://mail.google.com/mail/u/0?ui=2&ik=dff4e02589&attid=0.5&permmsgid=msg-f:1779166268401315701&th=18b0de4b706aef75&view=att&disp=safe&realattid=f_lnh28w543" alt="Your Logo" class="logo">
+
+    <form action="/search" method="POST">
+        <label for="ingredients">Enter Ingredients:</label>
+        <br>
+        <input type="text" id="ingredients" name="ingredients" required>
+        <br>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>

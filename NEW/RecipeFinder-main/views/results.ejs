@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search Results:</title>
+   <style>
+        body {
+            font-family: "Century Gothic", serif;
+            background-color: #decdcb;           
+            background-repeat: no-repeat; 
+            text-align: center;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: #f7f7f7a7;
+            color: #5d7536;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 50px; 
+            max-height: 50px;
+            margin-left: 40px; 
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); 
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        } 
+
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="background-container">
+        
+        
+        <% if (recipes.length === 0) { %>
+            <p>No recipes found.</p>
+        <% } else { %>
+            <ul>
+                <% recipes.forEach(recipe => { %>
+                    <ul>
+                        <h2><%= recipe.title %></h2>
+                        <p>Missing Ingredients: <%= recipe.missedIngredients.length %></p>
+                        <p>Used Ingredients: <%= recipe.usedIngredients.length %></p>
+                        <p>Unused Ingredients: <%= recipe.unusedIngredients.length %></p>
+                    </ul>
+                <% }); %>
+            </ul>
+        <% } %>
+    </div>
+</body>
+</html>
